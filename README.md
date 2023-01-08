@@ -1,6 +1,7 @@
 # Training_GetX
 
 A new Flutter project.
+Flutter version: 2.10.5
 
 ## Structure root
 - ```android```: In this directory, all the project files for the android application. You can make changes, add necessary permissions and native Android code here.

@@ -1,0 +1,10 @@
+export '/page/contract/contract_binding.dart';
+export '/page/contract/contract_view.dart';
+export '/page/home/home_binding.dart';
+export '/page/home/home_view.dart';
+export '/page/login/login_binding.dart';
+export '/page/login/login_view.dart';
+export '/page/root/root_binding.dart';
+export '/page/root/root_view.dart';
+export '/page/setting/setting_binding.dart';
+export '/page/setting/setting_view.dart';
