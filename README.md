@@ -4,7 +4,7 @@ A new Flutter project.
 
 Flutter version: 2.10.5
 
-Link design: link(https://www.figma.com/file/6jOuYgejXcu3Nl5EiqiA3P/Training-Getx?node-id=1%3A1784&t=7ahfKEdg4k2iV5TU-1)
+Link design: [link](https://www.figma.com/file/6jOuYgejXcu3Nl5EiqiA3P/Training-Getx?node-id=1%3A1784&t=7ahfKEdg4k2iV5TU-1)
 
 ## Structure root
 - ```android```: In this directory, all the project files for the android application. You can make changes, add necessary permissions and native Android code here.
