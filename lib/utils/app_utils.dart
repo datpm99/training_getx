@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:training_getx/routes/routes.dart';
 
 import '/const/import_const.dart';
 import '/lang/lang_controller.dart';
@@ -96,10 +97,26 @@ class AppUtils {
   }
 
   static bool validateSessionTimeout() {
+    final _storage = Get.find<StorageService>();
+    String sessionTimeout = _storage.sessionTimeout;
+    DateTime now = DateTime.now();
+    if (sessionTimeout.isEmpty) return false;
+
+    //Check current time <= timeout return false
+    DateTime? timeOut = DateTime.tryParse(sessionTimeout);
+    var diff = now.difference(timeOut!).inMinutes;
+    if (diff >= 0) return false;
+
     return true;
   }
 
-  static void logout() async {}
+  static void logout() async {
+    final _storage = Get.find<StorageService>();
+    _storage.sessionTimeout = '';
+    _storage.apiToken = '';
+    _storage.userInfo = '';
+    Get.offAllNamed(Routes.login);
+  }
 
   static Future<DateTime?> datePicker(BuildContext ctx,
       {required DateTime initDate, required String errorFormatText}) async {
