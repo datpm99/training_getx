@@ -2,6 +2,10 @@ const Map<String, String> langEn = {
   'menu_contract':'Contract',
   'menu_home':'Home',
   'menu_setting':'Setting',
+  'login': 'Login',
+  'forgot_password': 'Forgot your password',
+  'reset_password' : 'Reset password',
+
 
   //Message error.
   'msg_have_error': 'Something went wrong, please try again!',
