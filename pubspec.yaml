@@ -30,45 +30,49 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
-  flutter_switch: ^0.3.2
+  flutter_localizations:
+    sdk: flutter
 
-dev_dependencies:
+  #Base.
+  get: 4.6.1
+  get_storage: 2.0.3
+  dio: 4.0.6
+  velocity_x: 3.4.0
+  permission_handler: 9.2.0
+  device_info_plus: 3.2.3
+  google_fonts: 2.3.2
+  intl: 0.17.0
+  path_provider: 2.0.10
+  package_info_plus: 1.3.0
+  flutter_native_splash: 2.1.6
 
   #Response.
   auto_size_text: 3.0.0
-  device_info_plus: 3.2.3
-  dio: 4.0.6
+  flutter_screenutil: 5.5.3+1
+
+  #Util.
+  url_launcher: 6.1.2
+  tiengviet: 0.5.0
+  just_the_tooltip: 0.0.11
+  flutter_switch: ^0.3.2
+
+  #Animation.
+  flutter_staggered_animations: 1.0.0
+
+dev_dependencies:
+ flutter_test:
+    sdk: flutter
+
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^1.0.0
-  flutter_localizations:
-    sdk: flutter
-  flutter_screenutil: 5.5.3+1
-  flutter_test:
-    sdk: flutter
-  #Base.
-  get: 4.6.1
-  get_storage: 2.0.3
-  google_fonts: 2.3.2
-  intl: 0.17.0
-  just_the_tooltip: 0.0.11
-
-  #Animation.
-  liquid_pull_to_refresh: 3.0.1
-  package_info_plus: 1.3.0
-  path_provider: 2.0.10
-  permission_handler: 9.2.0
-  tiengviet: 0.5.0
-
-  #Util.
-  url_launcher: 6.1.2
-  velocity_x: 3.4.0
+ flutter_lints: ^1.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
+
 # The following section is specific to Flutter.
 flutter:
 

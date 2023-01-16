@@ -24,20 +24,17 @@ class SettingOption extends StatelessWidget {
         padding: const EdgeInsets.all(12.0),
         child: Row(
           children: [
-            Row(
-              children: [
-                Image.asset(
-                  settingImage,
-                  height: 24,
-                  width: 24,
-                ),
-                const SizedBox(width: 5),
-                Text(
-                  settingName,
-                  style: Styles.normalTextW700(),
-                ),
-              ],
+            Image.asset(
+              settingImage,
+              height: 24,
+              width: 24,
             ),
+            const SizedBox(width: 5),
+            Text(
+              settingName,
+              style: Styles.normalTextW700(),
+            ),
+            Spacer(),
            const Icon(Icons.arrow_forward_ios_rounded, color: Styles.grey10, size: 24,),
           ],
         ),

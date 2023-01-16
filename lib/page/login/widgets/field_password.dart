@@ -12,7 +12,7 @@ class FieldPassword extends GetView<LoginController> {
       return TextField(
         obscureText: controller.showPass.value,
         decoration: InputDecoration(
-          hintText: 'Nhập mật khẩu',
+          hintText: 'enter_password'.tr,
           hintStyle: Styles.normalText(color: Styles.grey1),
           suffixIcon: InkWell(
             onTap: controller.onChangedShowPassword,
@@ -29,7 +29,11 @@ class FieldPassword extends GetView<LoginController> {
           enabledBorder: Styles.inputBorder30(),
           focusedBorder: Styles.inputBorder30(color: Styles.primaryColor),
           isDense: true,
-          contentPadding: const EdgeInsets.all(10),
+          contentPadding: const EdgeInsets.only(
+            top: 13,
+            bottom: 14,
+            left: 25,
+          ),
         ),
       ).pSymmetric(h: 20);
     });

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '/const/import_const.dart';
 
 class TextfieldLogin extends StatelessWidget {
@@ -9,18 +10,13 @@ class TextfieldLogin extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       decoration: InputDecoration(
-        suffixIcon: inputName == 'Nhập mật khẩu'
-            ? const Icon(
-                Icons.visibility_off_outlined,
-                color: Styles.grey10,
-              )
-            : null,
-        labelStyle: Styles.normalTextW500(
-          color: Styles.grey1,
-        ),
-        labelText: inputName,
+        // labelStyle: Styles.normalTextW500(
+        //   color: Styles.grey1,
+        // ),
+        hintText: inputName.tr,
+        hintStyle: Styles.normalText(color: Styles.grey1),
         enabledBorder: Styles.inputBorder30(),
-        focusedBorder: Styles.inputBorder30(),
+        focusedBorder: Styles.inputBorder30(color: Styles.primaryColor),
         isDense: true,
         contentPadding: EdgeInsets.only(
           top: 13,

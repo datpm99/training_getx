@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '/const/import_const.dart';
 
 class LabelLogin extends StatelessWidget {
@@ -10,7 +11,7 @@ class LabelLogin extends StatelessWidget {
     return Row(
       children: [
         Text(
-          labelName,
+          labelName.tr.toUpperCase(),
           style: Styles.smallTextW700(
             color: Styles.grey11,
           ),
