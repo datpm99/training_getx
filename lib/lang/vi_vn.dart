@@ -2,6 +2,15 @@ const Map<String, String> langVi = {
   'menu_contract':'Hợp Đồng',
   'menu_home':'Tổng Quan',
   'menu_setting':'Cài Đặt',
+  'login': 'Đăng nhập',
+  'forgot_password': 'Quên mật khẩu',
+  'reset_password' : 'Lấy lại mật khẩu',
+  'enter_username': 'Nhập tên đăng nhập',
+  'enter_password': 'Nhập mật khẩu',
+  'business' : 'Doanh nghiệp',
+  'username': 'Tên đăng nhập',
+  'password': 'Mật khẩu',
+  'enter_registered_email' : 'Nhập email đã đăng ký',
 
   //Message error.
   'msg_have_error': 'Đã có lỗi xảy ra, Vui lòng thử lại!',
