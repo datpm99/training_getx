@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:training_getx/const/import_const.dart';
-import 'package:training_getx/page/setting/setting_option.dart';
+import 'package:training_getx/page/setting/widgets/setting_login_fingerprint.dart';
+import 'package:training_getx/page/setting/widgets/setting_option.dart';
+import 'package:get/get.dart';
+import 'package:training_getx/page/setting/setting_controller.dart';
 
-class SettingView extends StatelessWidget {
+class SettingView extends GetView<SettingController> {
   const SettingView({Key? key}) : super(key: key);
 
   @override
@@ -37,7 +40,7 @@ class SettingView extends StatelessWidget {
             const SizedBox(height: 32),
             Container(
               height: 378,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(20),
                   topRight: Radius.circular(20),
@@ -46,12 +49,29 @@ class SettingView extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  SizedBox(height: 10,),
-                  const SettingOption(settingName: 'Đổi mật khẩu', settingImage: 'assets/images/lock.png'),
-                  const SettingOption(settingName: 'Đổi ngôn ngữ (VNI)', settingImage: 'assets/images/translate.png'),
-                  const SettingOption(settingName: 'Đăng nhập bằng vân tay', settingImage: 'assets/images/biometrics.png'),
-                  const SettingOption(settingName: 'Hỗ trợ khách hàng', settingImage: 'assets/images/headphones.png'),
-                  const SettingOption(settingName: 'Đăng xuất', settingImage: 'assets/images/logout.png'),
+                  const SizedBox(height: 10),
+                  SettingOption(
+                    settingName: 'change_password',
+                    settingImage: 'assets/images/lock.png',
+                    onTap: () {},
+                  ),
+                  SettingOption(
+                    settingName: 'change_language',
+                    settingImage: 'assets/images/translate.png',
+                    onTap: controller.showLangDialog,
+                  ),
+                  const SettingFingerprint(),
+                  SettingOption(
+                    settingName: 'assist_customer',
+                    settingImage: 'assets/images/headphones.png',
+                    onTap: controller.showAssistCusDialog,
+                  ),
+                  SettingOption(
+                    settingName: 'logout',
+                    settingImage: 'assets/images/logout.png',
+                    onTap: () {},
+                    isLogout: true,
+                  ),
                 ],
               ),
             ),

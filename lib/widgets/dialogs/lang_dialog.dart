@@ -40,7 +40,7 @@ class LangDialog extends StatelessWidget {
                 title: Row(
                   children: [
                     Image.asset('assets/icons/ic_flag_vn.png',
-                        width: 36.w, height: 24.h),
+                        width: 36.w, height: 36.h),
                     SizedBox(width: 20.w),
                     Text('lang_vi'.tr, style: Styles.smallTextW700()),
                   ],
@@ -58,7 +58,7 @@ class LangDialog extends StatelessWidget {
                 title: Row(
                   children: [
                     Image.asset('assets/icons/ic_flag_us.png',
-                        width: 36.w, height: 24.h),
+                        width: 36.w, height: 36.h),
                     SizedBox(width: 20.w),
                     Text('lang_us'.tr, style: Styles.smallTextW700()),
                   ],
@@ -72,7 +72,7 @@ class LangDialog extends StatelessWidget {
               height: 40,
               width: 130,
               onTap: () => Get.back(),
-              text: 'close',
+              text: 'close'.tr.toUpperCase(),
             ).pOnly(top: 20.h),
           ],
         ).p(15),
