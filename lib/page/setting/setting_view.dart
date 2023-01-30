@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:training_getx/const/import_const.dart';
 import 'package:training_getx/page/setting/widgets/setting_login_fingerprint.dart';
-import 'package:training_getx/page/setting/widgets/setting_logout.dart';
 import 'package:training_getx/page/setting/widgets/setting_option.dart';
 import 'package:get/get.dart';
 import 'package:training_getx/page/setting/setting_controller.dart';
@@ -63,10 +62,16 @@ class SettingView extends GetView<SettingController> {
                   ),
                   const SettingFingerprint(),
                   SettingOption(
-                      settingName: 'assist_customer',
-                      settingImage: 'assets/images/headphones.png',
-                      onTap: controller.showAssistCusDialog),
-                  const SettingLogout(),
+                    settingName: 'assist_customer',
+                    settingImage: 'assets/images/headphones.png',
+                    onTap: controller.showAssistCusDialog,
+                  ),
+                  SettingOption(
+                    settingName: 'logout',
+                    settingImage: 'assets/images/logout.png',
+                    onTap: () {},
+                    isLogout: true,
+                  ),
                 ],
               ),
             ),

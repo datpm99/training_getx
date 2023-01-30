@@ -5,11 +5,16 @@ import 'package:training_getx/page/setting/setting_controller.dart';
 
 class SettingOption extends GetView<SettingController> {
   const SettingOption(
-      {Key? key, required this.settingName, required this.settingImage, required this.onTap})
+      {Key? key,
+      required this.settingName,
+      required this.settingImage,
+      required this.onTap,
+      this.isLogout = false})
       : super(key: key);
   final String settingName;
   final String settingImage;
   final VoidCallback onTap;
+  final bool isLogout;
 
   @override
   Widget build(BuildContext context) {
@@ -40,10 +45,13 @@ class SettingOption extends GetView<SettingController> {
                 style: Styles.normalTextW700(),
               ),
               const Spacer(),
-              const Icon(
-                Icons.arrow_forward_ios_rounded,
-                color: Styles.grey10,
-                size: 24,
+              Visibility(
+                visible: !isLogout,
+                child: const Icon(
+                  Icons.arrow_forward_ios_rounded,
+                  color: Styles.grey10,
+                  size: 24,
+                ),
               ),
             ],
           ),
