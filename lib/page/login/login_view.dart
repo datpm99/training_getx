@@ -33,7 +33,6 @@ class LoginView extends GetView<LoginController> {
                   onPressed: controller.showSheetForgotPass,
                   child: Text(
                     'forgot_password'.tr,
-                    textAlign: TextAlign.end,
                     style: Styles.normalTextW600(
                       color: Styles.blue7,
                     ),
